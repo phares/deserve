@@ -217,3 +217,5 @@ DATABASES = {
 MIGRATION_MODULES = {
     
 }
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
