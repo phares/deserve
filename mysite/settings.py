@@ -186,6 +186,21 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'ec2-50-17-255-6.compute-1.amazonaws.com',
+        'NAME': 'd5brt9g1d3g548',
+        'PASSWORD': 'ph4re5',
+        'PORT': '5432',
+        'USER': 'ehhlfrnuzqcupb',
+    }
+}
+
+'''
 DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
@@ -197,6 +212,7 @@ DATABASES = {
         'USER': ''
     }
 }
+'''
 
 MIGRATION_MODULES = {
     
