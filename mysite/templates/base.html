@@ -58,6 +58,9 @@
     </nav>
 
     <!-- Header -->
+	{% if request.current_page %}
+
+		{% if request.current_page|stringformat:"s" == "HOME" %}
     <header>
         <div class="container">
             <div class="intro-text">
@@ -69,6 +72,9 @@
         </div>
     </header>
 
+	{% else %}
+	{% endif %}{% endif %}
+
 {% block content %}{% endblock content %}
 
 
@@ -76,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Deserve Foundation </span>
+                    <span class="copyright">Copyright &copy; 2017 Deserve Foundation </span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">

@@ -179,6 +179,7 @@ CMS_TEMPLATES = (
     ('portfolio.html', 'portfolio template'),
     ('contact.html', 'contact template'),
     ('team.html', 'team template'),
+    ('member.html', 'become member'),
     ('about.html', 'about template')
 )
 
