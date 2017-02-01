@@ -180,6 +180,7 @@ CMS_TEMPLATES = (
     ('contact.html', 'contact template'),
     ('team.html', 'team template'),
     ('member.html', 'become member'),
+    ('volunteer.html', 'become volunteer'),
     ('about.html', 'about template')
 )
 
