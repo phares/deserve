@@ -1,6 +1,16 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
 from django.http import HttpResponse
+from django.template import RequestContext
+from django.core.mail import send_mail
+from django import forms
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+
+from .forms import ContactUsForm
+
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -13,6 +23,8 @@ def contactus(request):
     if request.method == 'POST':
 
         form = ContactUsForm(request.POST)
+
+        # if form.is_valid():
 
         name = request.POST['name']
         email = request.POST['email']
@@ -36,6 +48,9 @@ def contactus(request):
          #  redirect to a new URL:
 
         return HttpResponseRedirect('/contact/')
+
+        # else:
+        #     form = ContactUsForm()
 
     # if a GET (or any other method) we'll create a blank form
     else:
