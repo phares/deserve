@@ -1,5 +1,4 @@
 import os
-
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -19,6 +18,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -30,24 +30,19 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
 # Application definition
 
-
-
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER  = 'abungaphares@gmail.com'
-EMAIL_HOST_PASSWORD = 'rggfcbgttvijille'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 
 
 
 
 ROOT_URLCONF = 'mysite.urls'
 
+
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -68,6 +63,7 @@ USE_L10N = False
 
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
@@ -81,32 +77,34 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'mysite', 'templates'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'mysite', 'templates'),],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'django.core.context_processors.i18n',
-                'django.core.context_processors.debug',
-                'django.core.context_processors.request',
-                'django.core.context_processors.media',
-                'django.core.context_processors.csrf',
-                'django.core.context_processors.tz',
-                'sekizai.context_processors.sekizai',
-                'django.core.context_processors.static',
-                'cms.context_processors.cms_settings'
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.csrf',
+    'django.core.context_processors.tz',
+    'sekizai.context_processors.sekizai',
+    'django.core.context_processors.static',
+    'cms.context_processors.cms_settings'
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
-                'django.template.loaders.app_directories.Loader',
-                'django.template.loaders.eggs.Loader'
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader'
             ],
         },
     },
 ]
+
 
 MIDDLEWARE_CLASSES = [
     'cms.middleware.utils.ApphookReloadMiddleware',
@@ -191,6 +189,7 @@ CMS_PERMISSION = True
 CMS_PLACEHOLDER_CONF = {}
 
 
+'''
 
 DATABASES = {
     'default': {
@@ -215,9 +214,10 @@ DATABASES = {
         'USER': ''
     }
 }
-'''
-MIGRATION_MODULES = {
 
+
+MIGRATION_MODULES = {
+    
 }
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
