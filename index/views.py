@@ -10,6 +10,7 @@ from django.contrib import messages
 
 from .forms import ContactUsForm
 from .forms import MemberForm
+from .forms import VolunteerForm
 
 from django.core.mail import send_mail
 
@@ -98,7 +99,7 @@ def member(request):
     else:
 
         return HttpResponseRedirect('/member/')
-        form = ContactUsForm()
+        form = MemberForm
 
     return HttpResponseRedirect('/member/')
     #return render(request, '/contacts/', {'form': form})
@@ -109,22 +110,22 @@ def volunteer(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
 
-        form = ContactUsForm(request.POST)
-
-        # if form.is_valid():
+        form = VolunteerForm(request.POST)
 
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
+        country = request.POST['country']
+        period = request.POST['period']
         message = request.POST['message']
+        interest = request.POST['interest']
 
         send_to = 'abungaphares@gmail.com'
 
-        subject = 'New Contact US Form SignUp'
+        subject = 'New deserve Volunteer'
 
 
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Message" + " " + message
-
+        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + interest + " " + "Message" + " " + message
         sendmail(send_to, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
@@ -134,18 +135,14 @@ def volunteer(request):
 
          #  redirect to a new URL:
 
-        return HttpResponseRedirect('/contact/')
+        return HttpResponseRedirect('/volunteer/')
 
-        # else:
-        #     form = ContactUsForm()
-
-    # if a GET (or any other method) we'll create a blank form
     else:
 
-        return HttpResponseRedirect('/contact/')
-        form = ContactUsForm()
+        return HttpResponseRedirect('/volunteer/')
+        form = VolunteerForm
 
-    return HttpResponseRedirect('/contact/')
+    return HttpResponseRedirect('/volunteer/')
     #return render(request, '/contacts/', {'form': form})
 
 def sendmail( to, subject, message ):
