@@ -77,14 +77,15 @@ def member(request):
         phone = request.POST['phone']
         membertype = request.POST['membertype']
         condition = request.POST['condition']
-        interest = request.POST['interest']
+        interest = request.POST.getlist('interest')
 
         send_to = 'abungaphares@gmail.com'
 
         subject = 'New deserve Member'
 
 
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + interest
+        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Member Type" \
+               + " " + membertype + " " + "Condition" + " " + condition + " " + "Interest" + " " + str(interest)
         sendmail(send_to, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
@@ -118,14 +119,15 @@ def volunteer(request):
         country = request.POST['country']
         period = request.POST['period']
         message = request.POST['message']
-        interest = request.POST['interest']
+        interest = request.POST.getlist('interest')
 
         send_to = 'abungaphares@gmail.com'
 
         subject = 'New deserve Volunteer'
 
 
-        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + interest + " " + "Message" + " " + message
+        mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + \
+               " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + str(interest) + " " + "Message" + " " + message
         sendmail(send_to, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
