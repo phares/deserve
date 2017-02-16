@@ -132,7 +132,19 @@
 
     <!-- Theme JavaScript -->
     <script src="{% static 'js/agency.min.js' %}"></script>
-        {% render_block "js" %}
+
+	<script src="{% static 'js/readMoreJS.min.js' %}"></script>
+	<script>
+		$readMoreJS.init({
+			target: '.card-block p',
+			numOfWords: 10,
+			toggle: true,
+			moreLink: 'read more ...',
+			lessLink: 'read less'
+		});
+	</script>
+
+{% render_block "js" %}
 
 </body>
 
