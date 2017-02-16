@@ -144,6 +144,16 @@
 			lessLink: 'read less'
 		});
 	</script>
+	<script>
+		$readMoreJS.init({
+			target: '.team-member p',
+			numOfWords: 10,
+			toggle: true,
+			moreLink: 'read more ...',
+			lessLink: 'read less'
+		});
+	</script>
+
 
 {% render_block "js" %}
 
