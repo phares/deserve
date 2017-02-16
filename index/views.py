@@ -128,6 +128,8 @@ def volunteer(request):
 
         mail = "Name :" + " " + name + " " + "Email :" + " " + email + " " + "Phone" + " " + phone + " " + "Country" + \
                " " + country + " " + "Period" + " " + period + " " + "Interest" + " " + str(interest) + " " + "Message" + " " + message
+
+
         sendmail(send_to, subject, mail)
 
         messages.success(request, 'Thank you for contacting us. '
