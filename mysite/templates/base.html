@@ -1,4 +1,5 @@
 {% load cms_tags staticfiles sekizai_tags menu_tags %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +8,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Giving hope to children born with disability">
+    <meta name="author" content="Abunga Phares">
 
     <title>Deserve Foundation</title>
 
@@ -59,8 +60,8 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <!--<a class="navbar-brand page-scroll" href="/">Deserve Foundation</a>-->
-                <a href="/" ><img alt="logo" src="{% static 'img/logos/fwddeservefoundationlogo/logo1.1.jpg' %}" width="200" height="60">   </a>
+                <a class="navbar-brand page-scroll" style="color:white; font-style: normal;" href="/">Deserve Foundation</a>
+                <!--<a href="/" ><img alt="logo" src="{% static 'img/logos/fwddeservefoundationlogo/logo1.1.jpg' %}" width="200" height="60">   </a>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,13 +81,13 @@
 		{% if request.current_page|stringformat:"s" == "HOME" %}
     <header>
         <div class="container">
-            <div class="intro-text" align="right">
-                <div class="intro-lead-in"><h1>Everyone Deserves a right to life</h1></div>
-                <div class="intro-heading"><h4>We Create awareness about congenital disorders, provide  <br/> support groups for
-                    families battling challenges associated<br/> with congenital disorders and sponsor treatment for <br/>the less fortunate</h4></div>
-                <a href="/member" class="page-scroll btn btn-xl">Become A Member</a>
-                <a href="/member" class="page-scroll btn btn-xl">Save a Life</a>
-            </div>
+            <div class="intro-text">
+                <div class="intro-lead-in"><h1>{% placeholder "heading1" or %} Everyone Deserves a right to life {% endplaceholder%}</h1></div>
+                <div class="intro-heading"><h4 style="text-transform: lowercase; margin-left:100px; margin-right:100px; letter-spacing: 2px;">{% placeholder "heading2" or %}We Create awareness about congenital disorders, provide support groups for
+                    families battling challenges associated with congenital disorders and sponsor treatment for the less fortunate{% endplaceholder %}</h4></div>
+                <a href="/member" class="page-scroll btn btn-xl">{% placeholder "button1" or %}Become A Member {% endplaceholder %} </a>
+                <a href="/member" class="page-scroll btn btn-xl">{% placeholder "button2" or %}Save a Life{% endplaceholder %}</a>
+             </div>
         </div>
     </header>
 
@@ -149,7 +150,7 @@
 	<script src="{% static 'js/readMoreJS.min.js' %}"></script>
 	<script>
 		$readMoreJS.init({
-			target: '.card-block p, .team-member p',
+			target: '.card-block, .team-member p',
 			numOfWords: 20,
 			toggle: true,
 			moreLink: 'read more ...',
