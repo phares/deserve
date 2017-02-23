@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h2 class="section-heading">{% placeholder "heading1" or %}Our Amazing Team{% endplaceholder %}</h2>
                     <!--<h3 class="section-subheading text-muted">Founder, Partnerships and Mother of all deserve children</h3>-->
                 </div>
             </div>
@@ -17,19 +17,18 @@
                     <div class="team-member">
                         <img src="{% static 'img/team/chantal2.jpg' %}" class="img-responsive img-circle" alt="Chantal Openda" >
 
-                        <h4>Chantal Openda</h4>
-                        <p class="text-muted">Founder, Partnership </p>
-                        <p class="large text-muted" align="justify">Is a Business Developer and Growth professional. In her 7 year career, she has developed successful sales and marketing strategies that have seen the growth and success of the organizations she has served in.
-At Deserve, she oversees partnerships and leads the organization's strategy planning and execution efforts. She is also the mum in charge. Mother to all “deserve” children and sister and friend to the deserve parents.
+                        <h4>{% placeholder "member1" or %}Chantal Openda {% endplaceholder %}</h4>
+                        <p class="text-muted">{%  placeholder "member1 title " or %}Founder, Partnership {% endplaceholder %}</p>
+                        <p class="large text-muted" align="justify">{% placeholder "member1 text" or %}Chantal Is a Business Developer and Growth professional. In her 7 year career, she has developed and implemented successful sales and marketing strategies that have seen the  growth of the organizations she has served in. Despite her enterprise background, her passion for children and nature has seen her get involved in volunteer activities like Helping the Kids (HTK) a grassroot movement to help improve the living conditions of the children living in non- funded homes. She has also a National Geographic activist and has participated in a couple of movements like “Build a Boma”.  She is also an avid believer and advocate of gender equality and equality of persons with disabilities.
 <br/>At Deserve, she oversees partnerships and leads the organization's strategy planning and execution efforts.
-                        </p>
+                        {% endplaceholder %}</p>
 
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/chantalopenda"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/chantalopenda"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -37,11 +36,11 @@ At Deserve, she oversees partnerships and leads the organization's strategy plan
                 <div class="col-sm-6">
                     <div class="team-member">
                         <img src="{% static 'img/team/rosalia.jpg' %}" class="img-responsive img-circle" alt="Rosalia Lorenzen">
-                        <h4>Rosalia Lorenzen</h4>
-                        <p class="text-muted">Co-Founder, Operations and Finance and Funding</p>
-                        <p class="large text-muted" align="justify">Rosalia is a highly motivated and driven Finance and Operations Director with over eight years’ experience in developing and managing financial systems, implementing sound internal controls, budgeting, financial accounting, tax compliance, risk mitigation, preparation of financial and Management reports, oversight of internal and external audits, business development human resource management, petty cash management, cash flow management and managing the day to day office operations. She takes pride in working with and in organizations that focused on community development  which aim at bringing change to our society. Rosalia is self- driven, have a pleasant personality, great planning and organization skills and always embrace creative and innovative ways of thinking. She is very autonomous her work and have experience working in and with culturally diverse countries  which include  Tanzania, Mozambique, Nigeria, Cameroon, Senegal, DR Congo.
+                        <h4>{% placeholder "member2" or %}Rosalia Lorenzen {% endplaceholder %}</h4>
+                        <p class="text-muted">{%  placeholder "member2 title " or %}Co-Founder, Operations and Finance and Funding {% endplaceholder %}</p>
+                        <p class="large text-muted" align="justify">{% placeholder "member2 text" or %}Rosalia is a highly motivated and driven Finance and Operations Director with over eight years’ experience in developing and managing financial systems, implementing sound internal controls, budgeting, financial accounting, tax compliance, risk mitigation, preparation of financial and Management reports, oversight of internal and external audits, business development human resource management, petty cash management, cash flow management and managing the day to day office operations. She takes pride in working with and in organizations that focused on community development  which aim at bringing change to our society. Rosalia is self- driven, have a pleasant personality, great planning and organization skills and always embrace creative and innovative ways of thinking. She is very autonomous her work and have experience working in and with culturally diverse countries  which include  Tanzania, Mozambique, Nigeria, Cameroon, Senegal, DR Congo.
                         Rosalia has an MBA in Finance from U.S. International University, she is a CPA-K and holds a First class Honors Degree in Finance and Accounting.
-                        <br/>At Deserve, she oversees the finance, operations and human resource management.
+                        <br/>At Deserve, she oversees the finance, operations and human resource management.{% endplaceholder %}
                         </p>
 
                         <ul class="list-inline social-buttons">
@@ -49,7 +48,7 @@ At Deserve, she oversees partnerships and leads the organization's strategy plan
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/in/rosalialorenzen/"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
